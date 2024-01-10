@@ -1,4 +1,4 @@
-import examples.adder as adder
+import main.adder as adder
 import pytest
 
 class TestIncrement: 
