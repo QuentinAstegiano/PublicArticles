@@ -56,6 +56,9 @@ def test_increment_should_add_one():
 def test_is_prime_should_validate_prime_number():
 ```
 
+I recommend a pattern like *test_[method]_should_[method use case]*.
+Those names tend to be long, but it'll be easier to understand - the reading matter more than the writing. 
+
 ### Tests Location
 
 Separate your tests from your source code. Each should be in a separate folder hierarchy. For example:
@@ -75,7 +78,7 @@ test
   test_increment.py
 ```
 
-To access modules from another folder, set *__init__.py* files in your test folders and use the following code in the test parent folder:
+To access modules from another folder, set *__init__.py* files in your test folders to declare them as modules, and use the following code in the test parent folder:
 
 ```python
 import sys
@@ -101,7 +104,7 @@ def get_parent_sibling(parent, sibling_name):
 sys.path.append(get_parent_sibling("test", "main"))
 ```
 
-This code adds the *main* folder to all test files, allowing them to include the main modules:
+This code adds the *main* folder to the sys path of all test files, allowing them to include the main modules:
 
 ```python
 from main.increment import increment
