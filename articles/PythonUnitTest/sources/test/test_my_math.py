@@ -1,5 +1,5 @@
 import pytest
-from main.my_math import int_divide
+from main.my_math import int_divide, is_prime
 
 class TestIntDivision:
 
@@ -18,3 +18,18 @@ class TestIntDivision:
         for i in range(1, 1000):
             for j in range(1, 1000):
                 assert int_divide(i, j) == i // j
+
+class TestIsPrime:
+
+    @pytest.mark.parametrize("number, prime_status",
+                             [
+                                (2, True),
+                                (3, True),
+                                (4, False),
+                                (5, True),
+                                (6, False),
+                                (15, False),
+                                (17, True)
+                             ])
+    def test_is_prime_should_recognize_prime_numbers(self, number, prime_status):
+        assert is_prime(number) == prime_status

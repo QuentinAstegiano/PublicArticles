@@ -184,7 +184,7 @@ That mark can be then be used in your tests like the builtins ones :
 >      for j in range(1, 1000):
 >        assert int_divide(i, j) == i // j
 
-One use of those marks is to execute tests based on their mark, for exemple 
+One use of those marks is to execute tests based on their tag, for example 
 
 > pytest -k "not slow"
 > pytest -k "smoke_test"
@@ -194,7 +194,77 @@ This is extremely useful when defining CI jobs, when you want to have a specific
 
 ### Test parametrization
 
+Tests can be parametrized with a simple annotation : *@pytest.mark.parametrize*
+The goal of parametrization is to execute the same test with different parameters, to avoid repeating yourself when writing tests.
+
+For example, given this naive function : 
+
+> def is_prime(number: int) -> bool :
+>   for i in range(2, number // 2 + 1):
+>     if number % i == 0:
+>       return False
+>   return True
+
+You can write this parametrized test :
+
+> class TestIsPrime:
+>   @pytest.mark.parametrize("number, prime_status",
+>                            [
+>                               (2, True),
+>                               (3, True),
+>                               (4, False),
+>                               (5, True),
+>                               (6, False),
+>                               (15, False),
+>                               (17, True)
+>                            ])
+>   def test_is_prime_should_recognize_prime_numbers(self, number, prime_status):
+>       assert is_prime(number) == prime_status
+
+The annotation take a first argument describing the various parameter that this method will use ; and a list of tuples, each containing a value for each parameter defined in the first argument.
+For example here, the *is_prime* method is going to check that 2 and 3 are indeed primes number, that 4 is not, etc.
+
+Using parametrized tests remove a lot of boiler plate : instead of duplicating your code, or using functions inside your tests, or having a test that does multiple asserts, you just write your test once, and parametrize its calling.
+
 ### Fixtures
+
+Fixtures are another really powerful, and kind of advanced, feature of *pytest*.
+A fixture is basically a function that you want your test to execute and get the result of.
+
+Let's say, for example, that you have a method that take a complex parameter, for example : 
+
+> from dataclasses import dataclass
+> 
+> @dataclass
+> class Person:
+>   age: int
+>   first_name: str
+>   last_name: str
+> 
+> def is_person_older(person : Person, than : int) -> bool:
+>   return person.age > than
+
+You won't want to recreate a new Person for each test that you want to write, so instead you can use a fixture :
+
+> from main.age import is_person_older, Person
+> import pytest
+> 
+> class TestIsPersonOlder:
+> 
+>   @pytest.fixture
+>   def some_person(self):
+>     return Person(15, "John", "Doe")
+> 
+>   def test_is_person_older_recognize_a_yound_person(self, some_person):
+>     assert is_person_older(some_person, 5) is True
+> 
+>   def test_is_person_older_recognize_an_old_person(self, some_person):
+>     assert is_person_older(some_person, 95) is False
+
+Here, by declaring *some_person* as a fixture, I can use it as a parameter in my tests methods. It's result is captured and provided.
+That's nice : but the real beauty of it is that fixture are only executed once, and its result is cached.
+
+That mean that you can hide some expensive data behind fixture (something from a database or a remote call) ; or you can provide with a fixture something that should be instanciated only once, like a cache, a connection to a webservice, something that contains an intrinsic random part (like an UID), ...
 
 ## Executing your tests
 
