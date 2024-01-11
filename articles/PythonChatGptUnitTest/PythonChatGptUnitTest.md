@@ -1,22 +1,18 @@
-# Generating unit tests with ChatGpt
+# Streamlining Test Generation: Harnessing ChatGPT's Power for Automated Unit Tests in Python
 
-ChatGPT can be used for a lot of things. Why not ask it to write some tests for us ?
+ChatGPT is a versatile tool with the capability to assist in various tasks. How about leveraging its potential to automate the generation of unit tests?
 
-## Why
+## Why Use ChatGPT for Unit Tests?
 
-Writing tests is essential.
-Writing them all by hand can be long and cumbersome. What if we can ask our favorite bot for some tests, to jump start our activity ?
+Writing unit tests is a crucial aspect of software development. However, the manual creation of extensive test suites can be time-consuming and tedious. Imagine if you could expedite this process by enlisting the help of your favorite AI bot – ChatGPT.
 
 ## Prerequisite
 
-The idea here is to call ChatGPT with a prompt asking it to write some unit test, provide it with the source code, and write the result to a test file.
-
-I won't cover here the details of ChatGPT integration in Python ; if you need a refresher, read my other article : (Unlocking the Potential: A Guide to Using ChatGPT from Python)[https://medium.com/@quentin.astegiano/unlocking-the-potential-a-guide-to-using-chatgpt-from-python-1884fd7c3d7b]
+For a quick refresher on how to integrate ChatGPT in any Python program, you can refer to my previous article: (Unlocking the Potential: A Guide to Using ChatGPT from Python)[https://medium.com/@quentin.astegiano/unlocking-the-potential-a-guide-to-using-chatgpt-from-python-1884fd7c3d7b]
 
 ## Building The Test Generator
 
-Let's dive into the specifics.
-Here's the code to call ChatGPT.
+Let's explore the specific implementation. The following code snippet demonstrates how to call ChatGPT:
 
 ``` python
   def call_gpt(self, content: str) -> str:
@@ -35,9 +31,10 @@ Here's the code to call ChatGPT.
     return completion.choices[0].message.content
 ```
 
-As usual, you give a role to ChatGPT, here one of an "expert Python developper" ; provide him as a user of the required data ; and process it's response.
+In this code, ChatGPT is assigned the role of an "expert Python developer." The user provides the required data, and the response is processed accordingly.
 
-To get the content, we'll take a file name, and load its content :
+To obtain the content for processing, a file name is taken, and its content is loaded:
+
 ```python
   def get_file_content(self, source: str) -> str:
     with open(source, "r") as file:
@@ -48,7 +45,8 @@ To get the content, we'll take a file name, and load its content :
     return self.call_gpt(content)
 ```
 
-The only thing to do is to write the result to a test file - here I choose to prefix the class by "test_" and to put it next to the source code.
+The result is then written to a test file, with a naming convention of prefixing "test_" to the class and placing it next to the source code:
+
 ```python
   def create_test_file(self, source: str) -> str:
     content = self.generate(source)
@@ -59,13 +57,12 @@ The only thing to do is to write the result to a test file - here I choose to pr
     return target
 ```
 
-That litteraly all that is necessary for this task - albeit with a simplistic implementation.
-
-The complete source code is available on GitHub : 
+This simple implementation covers the essential steps for the task.
+The complete source code is accessible on (GitHub)[https://github.com/QuentinAstegiano/PublicArticles/blob/main/articles/PythonChatGptUnitTest/sources/main/test_generator.py]
 
 ## Testing The Generator
 
-Let's apply this generator to an example class, say, a simplistic implementation of a todolist : 
+Let's apply the generator to an example class – a basic implementation of a to-do list:
 
 ```python
 from dataclasses import dataclass
@@ -99,7 +96,9 @@ class ToDoList:
     return self._tasks.values()
 ```
 
-I'll create a simple *main* class to call the generator with a given parameter : 
+To invoke the generator, create a simple main class:
+
+
 ```python
 from test_generator import TestGenerator
 import sys
@@ -111,7 +110,7 @@ test_file = TestGenerator().create_test_file(source_file)
 print(f"Test file generated : {test_file}")
 ```
 
-Let's run it.
+Execute the script with the desired source file:
 
 ```bash
 $ python source/main/start_generator.py source/main/todolist.py
@@ -119,7 +118,7 @@ Generating test file for source/main/todolist.py
 Test file generated : source/main/test_todolist.py
 ```
 
-And indeed, we got some tests !
+Indeed, the tests have been successfully generated:
 
 ```python
 def test_new_task():
@@ -155,11 +154,8 @@ def test_get_all_tasks():
 
 ## Closing Words
 
-So, we used ChatGPT to generate some tests.
-Are those tests helpful ? Yes. Are they great ? No.
+By utilizing ChatGPT, we've automated the test generation process.
+Are these tests helpful? Yes. Are they optimal? No.
 
-ChatGPT can do much more than that, and provide test that are of much higher quality.
-The issue here is the prompt used. It's very simple, doesn't provide any guideline nor examples.
-
-ChatGPT can only be as good as the questions we ask it. 
-Using the example provided here, you can try some more appropriate prompts to get even better results !
+The quality of the generated tests depends on the prompt used. The example prompt here is simplistic, lacking guidelines and examples.
+Remember, ChatGPT's effectiveness relies on the questions we pose. Experiment with more detailed and precise prompts to obtain even better results!
