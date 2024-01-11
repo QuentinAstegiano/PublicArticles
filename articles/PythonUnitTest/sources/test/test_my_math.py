@@ -1,8 +1,8 @@
 import pytest
 from main.my_math import int_divide, is_prime
 
-class TestIntDivision:
 
+class TestIntDivision:
     def test_int_division_should_divide_numerator_by_denominator(self):
         assert int_divide(10, 2) == 5
 
@@ -19,17 +19,19 @@ class TestIntDivision:
             for j in range(1, 1000):
                 assert int_divide(i, j) == i // j
 
-class TestIsPrime:
 
-    @pytest.mark.parametrize("number, prime_status",
-                             [
-                                (2, True),
-                                (3, True),
-                                (4, False),
-                                (5, True),
-                                (6, False),
-                                (15, False),
-                                (17, True)
-                             ])
+class TestIsPrime:
+    @pytest.mark.parametrize(
+        "number, prime_status",
+        [
+            (2, True),
+            (3, True),
+            (4, False),
+            (5, True),
+            (6, False),
+            (15, False),
+            (17, True),
+        ],
+    )
     def test_is_prime_should_recognize_prime_numbers(self, number, prime_status):
         assert is_prime(number) == prime_status

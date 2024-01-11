@@ -7,20 +7,12 @@ In this guide, you'll learn how to create tests in Python using Pytest.
 ```python
 def increment(x: int) -> int:
     return add(x, 1)
-
 def test_increment_should_add_one():
     assert increment(5) == 6
 ```
 
 ```bash
 $ pytest sources/test/test_increment.py
-
-=================================== test session starts ===================================
-platform linux -- Python 3.11.6, pytest-7.4.0, pluggy-1.2.0 rootdir: /home/quentin/workspace/articles/articles/PythonUnitTest collected 1 item
-
-sources/test/test_increment.py . [100%]
-
-==================================== 1 passed in 0.00s ====================================
 ```
 
 You can find all source code presented here on my [GitHub](https://github.com/QuentinAstegiano/PublicArticles/tree/main/articles/PythonUnitTest/sources)

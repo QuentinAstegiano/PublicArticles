@@ -1,8 +1,8 @@
 from main.lib.util_lib import multiply_by_two
 import pytest
 
+
 class TestMultiply:
-   
     def test_multiply_by_two_should_double_input(self):
         assert multiply_by_two(5) == 10
 

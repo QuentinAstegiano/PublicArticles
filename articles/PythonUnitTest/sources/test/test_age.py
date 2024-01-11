@@ -1,8 +1,8 @@
 from main.age import is_person_older, Person
 import pytest
 
-class TestIsPersonOlder:
 
+class TestIsPersonOlder:
     @pytest.fixture
     def some_person(self):
         return Person(15, "John", "Doe")
