@@ -1,4 +1,4 @@
-# Using ChatGPT from Python
+# Unlocking the Potential: A Guide to Using ChatGPT from Python
 
 Ready to harness the power of ChatGPT from your Python code for fame and glory? Read on!
 
