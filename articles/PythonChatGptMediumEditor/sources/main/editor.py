@@ -35,15 +35,31 @@ class ChatGptEditor:
         print("Generating title...")
         role = """
             You are a skilled editor specialized on technical articles published on the internet.
-            What would be a good title for this article ?
+            Write the best possible title for that article, to grab a reader attention and to maximize engagement.
+        """
+        title = self.ask_gpt(role, content)
+        if title.startswith("#"):
+            title = title.replace("#", "")
+        return title
+
+    def generate_closing_statement(self, content: str) -> str:
+        print("Generating closing statement...")
+        role = """
+            You are a skilled editor specialized on technical articles published on the internet.
+            Write a suitable conclusion for the given article, sumarizing what was written and offering perspective on some next steps.
         """
         return self.ask_gpt(role, content)
 
     def generate_review(self, content: str) -> str:
         print("Generating editor review...")
         role = """
-            You are a skilled editor specialized on technical articles published on the internet.
-            Review the provided article correct the writing mistakes and reformulate when necessary.
+            You are a skilled editor specialized in technical articles published on the internet.
+            Review the provided article, correct any writing mistakes, and reformulate when necessary— even if it involves rewriting entire sentences. Create actual sentences when they are missing.
+            Aim to enhance clarity, improve grammar, and refine the overall writing quality.
+            Also aim to maximize reader engagement throughout the article.
+            When possible, generate additional content to expand on what is written in the article, without changing the original meaning.
+
+            Ensure that code snippets remain intact.        
         """
         return self.ask_gpt(role, content)
 
@@ -54,14 +70,24 @@ class ChatGptEditor:
             edited_content = self.generate_review(content)
             title = self.generate_title(edited_content)
             subtitle = self.generate_subtitle(edited_content)
+            closing_statement = self.generate_closing_statement(edited_content)
 
-            final_content = f"# {title}\n" + subtitle + "\n\n" + edited_content
+            final_content = f"""
+# {title}\n 
+{subtitle}\n\n
+{edited_content}\n\n
+# Conclusion\n
+{closing_statement}
+                """
 
             splitted = editor_file.split(os.sep)
+            if len(splitted) == 1:
+                splitted = [".", splitted[0]]
             target = os.sep.join(splitted[0:-1]) + os.sep + f"reviews_{splitted[-1]}"
             with open(target, "w") as target_file:
                 target_file.write(final_content)
-            return target
+                print(f"Saving edited article to {target}")
+                return target
 
 
 ChatGptEditor().edit_article(sys.argv[1])
