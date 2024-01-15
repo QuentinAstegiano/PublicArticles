@@ -5,7 +5,6 @@ load_dotenv()
 
 
 class ChatGptCalculator:
-    _role = "You are a calculator. You'll receive mathematical operations, and you'll respond with only the mathematical answer."
     _client = OpenAI()
 
     def calculate(self, query: str) -> float:
@@ -14,7 +13,7 @@ class ChatGptCalculator:
             messages=[
                 {
                     "role": "system",
-                    "content": self._role,
+                    "content": "You are a calculator. You'll receive mathematical operations, and you'll respond with only the mathematical answer.",
                 },
                 {"role": "user", "content": query},
             ],

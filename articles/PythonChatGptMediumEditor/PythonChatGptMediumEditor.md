@@ -153,8 +153,7 @@ Saving edited article to ./reviews_PythonChatGptMediumEditor.md
 ```
 
 For demonstration purpose, I've used that very script on that very article. 
-You can see the original, unedited file here : 
-And the edited version here : 
+You can see the original, unedited file here : [https://github.com/QuentinAstegiano/PublicArticles/blob/main/articles/PythonChatGptMediumEditor/PythonChatGptMediumEditor.md]
+And the edited version here : [https://github.com/QuentinAstegiano/PublicArticles/blob/main/articles/PythonChatGptMediumEditor/reviews_PythonChatGptMediumEditor.md] 
 
-
-The complete source code is available on Github : link to Github
+The complete source code is available on (Github)[https://github.com/QuentinAstegiano/PublicArticles/tree/main/articles/PythonChatGptMediumEditor]

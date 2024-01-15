@@ -96,7 +96,7 @@ def get_parent_sibling(parent, sibling_name):
 sys.path.append(get_parent_sibling("test", "main"))
 ```
 
-This code adds the *main* folder to the sys path of all test files, allowing them to include the main modules:
+This code adds the *main* folder to the sys path of all test files in any *test* subfolder, allowing them to include the main modules:
 
 ```python
 from main.increment import increment
@@ -268,3 +268,8 @@ Print the durations of the slower tests:
 ```bash
 pytest --durations=0
 ```
+
+## Conclusion
+
+We've seen here how to setup *pytest* and use it, in some basic and some more advanced use cases.
+*pytest* 
