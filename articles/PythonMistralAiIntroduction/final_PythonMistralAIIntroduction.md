@@ -1,16 +1,16 @@
 
-# "Build a Powerful Medium Article Editor with MistralAI: Unleashing its Editing Capabilities"
+# Forget about ChatGPT, Discover MistralAI : the forefront of the AI revolution
  
-"Discover the potential of MistralAI: A step-by-step guide to creating a Medium Article Editor. Revolutionize your writing process with this powerful language model."
+Discover MistralAI: a revolutionary language model offering human-like text generation, deep understanding, and creativity. Start your journey with this new hot language model right now !
 
+# Introduction
 
-Title: Unlocking the Power of MistralAI: A Comprehensive Guide to Building a Medium Article Editor
+MistralAI is a cutting-edge large language model (LLM) developed by a French start-up, designed to rival industry giants like ChatGPT. 
+It's creating great content, it's cheap, it's easy to use... what's not to like ?
 
-Introduction
+To show you some of this engine capabilities, I'll guide you through you through the process of utilizing MistralAI to build a Medium Article Editor, similar to the one I have created here with ChatGPT: [Unlocking the Power of ChatGPT: Revolutionize Your Technical Article Editing](https://medium.com/@quentin.astegiano/unlocking-the-power-of-chatgpt-revolutionize-your-technical-article-editing-d6ae637698ba).
 
-MistralAI is a cutting-edge large language model (LLM) developed by a French start-up, designed to rival industry giants like ChatGPT. This article will guide you through the process of utilizing MistralAI to build a Medium Article Editor, similar to the one I have created here: [Unlocking the Power of ChatGPT: Revolutionize Your Technical Article Editing](https://medium.com/@quentin.astegiano/unlocking-the-power-of-chatgpt-revolutionize-your-technical-article-editing-d6ae637698ba).
-
-Getting Started with MistralAI
+# Getting Started with MistralAI
 
 To get started with MistralAI, you need an API key, which you can obtain by signing up on their [website](https://mistral.ai/). The pricing is based on token usage and is quite affordable: [MistralAI Pricing](https://docs.mistral.ai/platform/pricing/). A standard round trip will typically use a couple hundred tokens at most, with the cheapest model costing €0.14 per million input tokens and €0.42 per million output tokens. Additionally, you can set a usage limit (e.g., €5 or €10 per month) to prevent overspending.
 
@@ -27,7 +27,7 @@ Create a `.env` file and insert your secret API key:
 MISTRAL_API_KEY=[YOUR_API_KEY]
 ```
 
-Verifying the MistralAI Installation
+# Verifying the MistralAI Installation
 
 To ensure everything is working as intended, make a initial call to MistralAI:
 
@@ -50,7 +50,7 @@ print(response.choices[0].message.content)
 
 This code snippet loads the environment, creates a client, and asks a simple question to the model. Note that the `load_dotenv()` function must be called before importing the `MistralClient` for the client to access your API key properly.
 
-Building a Medium Article Editor with MistralAI
+# Building a Medium Article Editor with MistralAI
 
 The complete source code is available on my [GitHub](https://github.com/quentin-astegiano/mistral-medium-article-editor).
 
@@ -158,12 +158,11 @@ Generating closing statement...
 Saving edited article to ./reviews_PythonMistralAIIntroduction.md
 ```
 
-
 # Conclusion
 
-In conclusion, MistralAI is a powerful large language model that can be harnessed to create a Medium Article Editor, enabling you to review, correct, and enhance your writing in a matter of minutes. By following the steps outlined in this guide, you have gained the knowledge to integrate MistralAI into your own projects and take advantage of its impressive capabilities.
+MistralAI is an incredible tool with excellent capabilities. It's at the very forefront of the AI revolution.
 
-Moving forward, consider exploring MistralAI's more advanced features and models, which can offer even greater precision and control over the generated content. Additionally, expanding the capabilities of your Medium Article Editor by adding new functions, such as generating summaries or outlines, can further streamline your writing process.
+The usage presented here is merely a toy (albeit an useful one, at least to correct my spelling mistakes...).
 
-By embracing the power of MistralAI, you are positioning yourself at the forefront of the AI revolution, enabling you to create captivating and engaging content with ease. As you continue to explore the vast potential of MistralAI, you will unlock new ways to improve your writing, captivate your audience, and stay ahead in the ever-evolving digital landscape.
-                
+The content created by MistralAI is excellent, and it's ability to understand written language is impressive.
+I'll explore some more complex and useful use of MistralAI in some future articles.
