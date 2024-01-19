@@ -2,7 +2,7 @@
 
 Unleash the power of Mistral AI to classify products by extracting technical features from descriptions. In this hands-on article, learn how to build a product classifier for desktop computers, equipping you with knowledge to create similar tools for various applications. 
 
-## Maximizing Product Classification with Mistral AI
+# Maximizing Product Classification with Mistral AI
 
 Welcome to this engaging exploration of Mistral AI's capabilities! In this article, we will create a practical and real-world tool that classifies products by extracting their technical characteristics from descriptions. This hands-on experience will not only demonstrate Mistral AI's power but also equip you with the knowledge to build similar tools for various applications.
 
@@ -37,7 +37,7 @@ To create our product classifier, follow these steps:
 3. Call Mistral AI for each product to extract the characteristics.
 4. Save the extracted data in a user-friendly format.
 
-Here's the complete source code for the project: <https://github.com/QuentinAstegiano/PublicArticles/blob/main/articles/MistralAiProductClassifier/sources/main/MistralClassifier.py>
+Here's the complete source code for the project: [MistralClassifier.py](https://github.com/QuentinAstegiano/PublicArticles/blob/main/articles/MistralAiProductClassifier/sources/main/MistralClassifier.py)
 
 ## Extracting Characteristics with Mistral AI
 
@@ -133,6 +133,15 @@ extracted_file = MistralClassifier().classify_products(
 ```
 
 Note that this is the only point where some context specific data is set : everything else is generic and should work with any kind of data you want to extract some characteristics from.
+
+The complete output on the sample data is available here : [https://github.com/QuentinAstegiano/PublicArticles/blob/main/articles/MistralAiProductClassifier/sources/resources/desktop_pc_sample__extracted.csv]
+Here's an exerpt of it : 
+```csv
+,URL,CPU,GPU,Amount of RAM,Type of RAM
+0,https://www.amazon.com/Lenovo-Business-19-5-Dual-Core-Processor/dp/B0CCF99RFQ,Intel Celeron J4025 Dual Core,Integrated Intel UHD Graphics 600,16GB,DDR4
+1,https://www.amazon.com/Dell-XPS-8950-i9-12900K-Bluetooth/dp/B0BBGQJMK9,Intel Core i9-12900K,AMD Radeon RX 6700XT,64GB,GDDR6
+2
+```
 
 # Conclusion
 
