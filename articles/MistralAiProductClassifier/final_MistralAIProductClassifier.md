@@ -41,23 +41,31 @@ Here's the complete source code for the project: [MistralClassifier.py](https://
 
 ## Extracting Characteristics with Mistral AI
 
-First, let's create a function that asks Mistral AI to classify the product data:
+First, let's create a function that asks Mistral AI to classify the product data.
+As usual, the most important thing here is the prompt. Here's what I've come up with:
+
+> You are an automation system that take a input consisting of a product data, 
+> and that ouput a dictionnary of extracted characteristics from that data.
+> Extract from this data about a product the value of each of those fields : 
+> [List of the fields to extract]
+> The output must be in this dictionnary format : 
+> {
+>     "field1": "value1",
+>     "field2": "value1"
+> }
+> The output should not contain anything else than the dictionnary. It must be precisely formatted as required.
+> Only the "value" should be replaced by the actual value extracted from the data.
+> There must not be any other content in the response.
+
+Here's my implemention : 
 
 ```python
 def _ask_mistral(self, product, characteristics: List[str]) -> str:
     system_role = f"""
-    You are an automation system that takes a product data input and outputs a
-    dictionary of extracted characteristics from that data. Extract from this
-    data about a product the value of each of those fields: {', '.join(characteristics)}
-    The output must be a dictionary in the following format:
-    {
-        'field1': 'value1',
-        'field2': 'value2'
-    }
-    The output should only contain the dictionary and should be precisely
-    formatted as required. Only the 'value' should be replaced by the actual
-    value extracted from the data. There should be no other content in the
-    response.
+    You are an automation [...]
+    Extract from this data about a product the value of each of those fields: 
+    {', '.join(characteristics)} 
+    [...]
     """
 
     response = MistralClient().chat(
