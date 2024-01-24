@@ -1,0 +1,93 @@
+
+Expérience
+
+    Fnac Darty
+    6 ans 3 mois
+        Responsable de domaine
+        mars 2019 - aujourd’hui · 4 ans 11 moismars 2019 - aujourd’hui · 4 ans 11 mois Région de Paris, FranceRégion de Paris, France
+                Afin de pouvoir gérer l'augmentation du périmètre et de la taille des équipes, je me recentre sur le poste de Responsable des Domaines "Front Web Darty" et "Search".
+
+                Je pilote une quarantaine de personnes (développeurs, MOA, testeurs, support de prod) sur un périmètre fonctionnel incluant l'ensemble des systèmes front de la plateforme e-commerce de Darty, ainsi que les moteurs de recherche du groupe.
+
+                J'interviens aussi bien sur des sujets de pilotage (management, établissement de roadmap, gestion budgétaire, gestion de projets, ...) qu'au quotidien avec les équipes techniques, afin de les accompagner dans les conceptions et les réalisations.Afin de pouvoir gérer l'augmentation du périmètre et de la taille des équipes, je me recentre sur le poste de Responsable des Domaines "Front Web Darty" et "Search". Je pilote une quarantaine de personnes (développeurs, MOA, testeurs, support de prod) sur un périmètre fonctionnel incluant l'ensemble des systèmes front de la plateforme e-commerce de Darty, ainsi que les moteurs de recherche du groupe. J'interviens aussi bien sur des sujets de pilotage (management, établissement de roadmap, gestion budgétaire, gestion de projets, ...) qu'au quotidien avec les équipes techniques, afin de les accompagner dans les conceptions et les réalisations.
+        Directeur technique
+        nov. 2017 - aujourd’hui · 6 ans 3 moisnov. 2017 - aujourd’hui · 6 ans 3 mois Ivry sur SeineIvry sur Seine
+                En charge de la Direction Technique du département SI Vente au sein du groupe Fnac Darty, responsable du pilotage des activités techniques transverses au département.
+
+                Responsable de la gestion des Releases des fronts internet (FnacCom & déclinaisons pays, DartyCom, sites B2B) et de l'industrialisation de ces processus; a ce titre, pilotage d'activités d'automatisation de tests, d'experts DBA, ...
+
+                D'autre part, en tant que Responsable (Acting) du domaine Front Web Darty, pilotage en direct des activités internet de DartyCom: gestion d'une équipe technique de 12 développeurs, d'une équipe de support de production, et d'une équipe projet MOE / MOA.
+                A ce titre, gestion des budgets, releases et de la roadmap DartyCom, réception de besoin métiers, architecture et conception haut niveau, et suivi des réalisations via des méthodes agiles. Participation aux réalisations et aux implémentations des solutions.
+
+
+
+                En charge de la Direction Technique du département SI Vente au sein du groupe Fnac Darty, responsable du pilotage des activités techniques transverses au département. Responsable de la gestion des Releases des fronts internet (FnacCom & déclinaisons pays, DartyCom, sites B2B) et de l'industrialisation de ces processus; a ce titre, pilotage d'activités d'automatisation de tests, d'experts DBA, ... D'autre part, en tant que Responsable (Acting) du domaine Front Web Darty, pilotage en direct des activités internet de DartyCom: gestion d'une équipe technique de 12 développeurs, d'une équipe de support de production, et d'une équipe projet MOE / MOA. A ce titre, gestion des budgets, releases et de la roadmap DartyCom, réception de besoin métiers, architecture et conception haut niveau, et suivi des réalisations via des méthodes agiles. Participation aux réalisations et aux implémentations des solutions. 
+    Logo de Darty
+    DartyDarty
+    6 ans 8 mois6 ans 8 mois Région de Paris, FranceRégion de Paris, France
+        Directeur techniqueDirecteur technique
+        sept. 2015 - nov. 2017 · 2 ans 3 moissept. 2015 - nov. 2017 · 2 ans 3 mois
+                En charge de la Direction Technique du domaine Commerce Cross Canal, architecte principal sur les différents projets traités par les équipes du domaine.
+
+                Réalisation des analyses d'impact sur la quasi-totalité des projets étudiés.
+
+                Réalisation des documents d'architecture des sujets principaux, comme la refonte des espaces clients Darty, le développement du site DartyPro, ou la vente de prestations sur les sites Internet.
+
+                Implémentations des projets les plus critiques, comme la mise en place d'ElasticSearch (solution d'indexation des catalogues produits) ou l'amélioration de la sécurité des fronts de vente.
+
+                Pilotage d’une bascule des codes sources dans BitBucket, et mise en place de nouveaux processus de développement à base de code review et de pair programming.
+
+                Homogénéisation des méthodes de build des différents projets via un plugin Gradle spécifique, et mise en place des pipelines de livraison continue dans Jenkins.
+
+                Mise en place d’une stack ElasticSearch / Logstash / Kibana afin d'améliorer le monitoring des applications en production.En charge de la Direction Technique du domaine Commerce Cross Canal, architecte principal sur les différents projets traités par les équipes du domaine. Réalisation des analyses d'impact sur la quasi-totalité des projets étudiés. Réalisation des documents d'architecture des sujets principaux, comme la refonte des espaces clients Darty, le développement du site DartyPro, ou la vente de prestations sur les sites Internet. Implémentations des projets les plus critiques, comme la mise en place d'ElasticSearch (solution d'indexation des catalogues produits) ou l'amélioration de la sécurité des fronts de vente. Pilotage d’une bascule des codes sources dans BitBucket, et mise en place de nouveaux processus de développement à base de code review et de pair programming. Homogénéisation des méthodes de build des différents projets via un plugin Gradle spécifique, et mise en place des pipelines de livraison continue dans Jenkins. Mise en place d’une stack ElasticSearch / Logstash / Kibana afin d'améliorer le monitoring des applications en production.
+        Responsable d'ApplicationResponsable d'Application
+        mars 2013 - sept. 2015 · 2 ans 7 moismars 2013 - sept. 2015 · 2 ans 7 mois
+                Gestion d’une équipe de trois à six personnes qui développent l'intégralité des projets impactant les fronts DartyCom et MisterGoodDeal.
+
+                Contribution à la transition d'une architecture monolithique vers une architecture de services s'appuyant sur DropWizard et Jetty.
+
+                Participation aux développements de la plupart des projets, soit directement sur les implémentations (projets sur l'intégration d'une place de marché, la refonte ergonomique du site, la création d'un nouveau tunnel d'achat, ...) soit en supervision sur ce qui est réalisé par l'équipe.
+
+                Réalisation de plusieurs applications:
+                 - une application d'analyse d'historique de ventes pour aider à la recommandation produit,
+                 - un service de comparateur de prix entre Darty et ses concurrents,
+                 - des applications d'administration éditoriale
+
+                Simplification des outils à disposition de l'équipe en basculant les builds des applications sur Gradle et en développant des automatisations des process via des scripts Bash et Groovy.Gestion d’une équipe de trois à six personnes qui développent l'intégralité des projets impactant les fronts DartyCom et MisterGoodDeal. Contribution à la transition d'une architecture monolithique vers une architecture de services s'appuyant sur DropWizard et Jetty. Participation aux développements de la plupart des projets, soit directement sur les implémentations (projets sur l'intégration d'une place de marché, la refonte ergonomique du site, la création d'un nouveau tunnel d'achat, ...) soit en supervision sur ce qui est réalisé par l'équipe. Réalisation de plusieurs applications: - une application d'analyse d'historique de ventes pour aider à la recommandation produit, - un service de comparateur de prix entre Darty et ses concurrents, - des applications d'administration éditoriale Simplification des outils à disposition de l'équipe en basculant les builds des applications sur Gradle et en développant des automatisations des process via des scripts Bash et Groovy.
+        Responsable d'application juniorResponsable d'application junior
+        avr. 2011 - mars 2013 · 2 ansavr. 2011 - mars 2013 · 2 ans
+                Participation à la création des nouveaux fronts de vente de Darty.
+
+                Développement de l'intégration du moteur d'indexation Endeca.
+
+                Réalisation des back offices d'administration, développés avec le framework Vaadin, à destination des équipes métier.
+
+                Développement de multiples projets, comme la vente de forfait téléphonique, le développement du merchandising, ou les synergies entre les applications web et magasin.
+
+                Contribution à la mise en place d’un serveur d'intégration continue Hudson, et création un ensemble de tests d'acceptance sur les fronts.Participation à la création des nouveaux fronts de vente de Darty. Développement de l'intégration du moteur d'indexation Endeca. Réalisation des back offices d'administration, développés avec le framework Vaadin, à destination des équipes métier. Développement de multiples projets, comme la vente de forfait téléphonique, le développement du merchandising, ou les synergies entre les applications web et magasin. Contribution à la mise en place d’un serveur d'intégration continue Hudson, et création un ensemble de tests d'acceptance sur les fronts.
+    Logo de ORTEC
+    Expert JavaExpert Java
+    ORTEC - Optimize Your WorldORTEC - Optimize Your World 2009 - avr. 2011 · 2 ans 4 mois2009 - avr. 2011 · 2 ans 4 mois Région de Paris, FranceRégion de Paris, France
+            Au sein d'une équipe de cinq personnes :
+
+             - Participation au développement du logiciel BKIW.
+             - Réalisation de la couche front (Java GWT, ExJS) de ce produit de gestion et d'optimisation de planning de collecte de déchets industriels.
+            Au sein d'une équipe de cinq personnes : - Participation au développement du logiciel BKIW. - Réalisation de la couche front (Java GWT, ExJS) de ce produit de gestion et d'optimisation de planning de collecte de déchets industriels. 
+    Logo de MASA Group S.A.
+    MASA GroupMASA Group
+    4 ans 1 mois4 ans 1 mois Région de Paris, FranceRégion de Paris, France
+        Technical Team LeadTechnical Team Lead
+        2006 - 2009 · 3 ans2006 - 2009 · 3 ans
+                Ayant sous ma responsabilité technique une équipe de une à trois personnes :
+                 - Conception et développement de Mapeos Acquisition en Java (Vaadin) et Javascript. Cette application permet aux collectivités locales de saisir, visualiser et modifier des circuits de collecte d'ordures ménagères.
+                Ayant sous ma responsabilité technique une équipe de une à trois personnes : - Conception et développement de Mapeos Acquisition en Java (Vaadin) et Javascript. Cette application permet aux collectivités locales de saisir, visualiser et modifier des circuits de collecte d'ordures ménagères. 
+        Ingénieur de développement JavaIngénieur de développement Java
+        2005 - 2006 · 1 an2005 - 2006 · 1 an
+                Conception et réalisation de l'application Mapeos Information en Java et Javascript pour EcoEmballage. A l'aide du framework de cartographie ESRI, cette solution web permet de présenter graphiquement des données relatives à la collecte de déchets.
+                Conception et réalisation de l'application Mapeos Information en Java et Javascript pour EcoEmballage. A l'aide du framework de cartographie ESRI, cette solution web permet de présenter graphiquement des données relatives à la collecte de déchets. 
+
+FormationFormation
+
+    Logo de EFREI - Grande école du numérique
+    EFREI - Grande école du numériqueEFREI - Grande école du numérique
+    Diplôme d'ingénieur, Ingénierie logicielleDiplôme d'ingénieur, Ingénierie logicielle 2000 - 2005
