@@ -1,14 +1,14 @@
 import pandas as pd
+from openai import OpenAI
 from dotenv import load_dotenv
-from mistralai.models.chat_completion import ChatMessage
 from ast import literal_eval
 
 load_dotenv()
 
-from mistralai.client import MistralClient
 
+class ChatGPTClassifier:
+    _client = OpenAI()
 
-class MistralClassifier:
     def _get_sample_dict(self, characteristics: list) -> str:
         sample = "{"
         for c in characteristics:
@@ -16,7 +16,7 @@ class MistralClassifier:
         sample += "}"
         return sample
 
-    def _ask_mistral(self, product, characteristics: list):
+    def _ask_chatgpt(self, product, characteristics: list):
         system_role = f"""
             You are an automation system that take a input consisting of a product data, 
             and that ouput a dictionnary of extracted characteristics from that data.
@@ -33,11 +33,11 @@ class MistralClassifier:
             Only the "value" should be replaced by the actual value extracted from the data.
             There must not be any other content in the response.
         """
-        response = MistralClient().chat(
-            model="mistral-tiny",
+        response = self._client.chat.completions.create(
+            model="gpt-3.5-turbo",
             messages=[
-                ChatMessage(role="system", content=system_role),
-                ChatMessage(role="user", content=product),
+                {"role": "system", "content": system_role},
+                {"role": "user", "content": product},
             ],
         )
         content = response.choices[0].message.content
@@ -51,11 +51,11 @@ class MistralClassifier:
         df["Combined"] = df[source_columns].apply(
             lambda x: ", ".join(x.dropna().astype(str)), axis=1
         )
-        df["Mistral"] = df["Combined"].apply(
-            lambda x: self._ask_mistral(x, characteristics)
+        df["ChatGPT"] = df["Combined"].apply(
+            lambda x: self._ask_chatgpt(x, characteristics)
         )
-        df["Mistral"] = df["Mistral"].apply(literal_eval)
-        result = df.join(pd.json_normalize(df.pop("Mistral")))
+        df["ChatGPT"] = df["ChatGPT"].apply(literal_eval)
+        result = df.join(pd.json_normalize(df.pop("ChatGPT")))
         return result
 
     def classify_products(
@@ -66,7 +66,7 @@ class MistralClassifier:
         df = self._extract_characteristics(df, source_columns, characteristics)
 
         selected_columns = columns_to_keep + characteristics
-        target_file = source_file.replace(".csv", "__extracted_mistral.csv")
+        target_file = source_file.replace(".csv", "__extracted_chatgpt.csv")
 
         df[selected_columns].to_csv(target_file)
 
@@ -74,7 +74,7 @@ class MistralClassifier:
 
 
 source_file = "./sources/resources/desktop_pc_sample.csv"
-extracted_file = MistralClassifier().classify_products(
+extracted_file = ChatGPTClassifier().classify_products(
     source_file=source_file,
     source_columns=["Title", "About", "Description"],
     characteristics=["CPU", "GPU", "Amount of RAM", "Type of RAM"],
